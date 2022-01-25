@@ -6,3 +6,4 @@ week_1/docker_sql_test/ny_taxi_postgres_data
 week_1/terraform_gcp/.terraform
 week_1/docker_sql_test/output.csv
 sage-now-339201-9949dc765269.json
+week_1/docker_sql_test/yellow_tripdata_2021-01.csv
