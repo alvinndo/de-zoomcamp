@@ -2,10 +2,10 @@
 .DS_Store
 
 # Week 1 files
-week_1/docker_sql_test/ny_taxi_postgres_data
-week_1/terraform_gcp/.terraform
-week_1/terraform_gcp/.terraform.lock.hcl
-week_1/docker_sql_test/output.csv
+week_1_basics_and_setup/docker_sql_test/ny_taxi_postgres_data
+week_1_basics_and_setup/terraform_gcp/.terraform
+week_1_basics_and_setup/terraform_gcp/.terraform.lock.hcl
+week_1_basics_and_setup/docker_sql_test/output.csv
 sage-now-339201-9949dc765269.json
-week_1/docker_sql_test/yellow_tripdata_2021-01.csv
-week_1/docker_sql_test/.ipynb_checkpoints/
+week_1_basics_and_setup/docker_sql_test/yellow_tripdata_2021-01.csv
+week_1_basics_and_setup/docker_sql_test/.ipynb_checkpoints/
