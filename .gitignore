@@ -9,3 +9,7 @@ week_1_basics_and_setup/docker_sql_test/output.csv
 sage-now-339201-9949dc765269.json
 week_1_basics_and_setup/docker_sql_test/yellow_tripdata_2021-01.csv
 week_1_basics_and_setup/docker_sql_test/.ipynb_checkpoints/
+
+# Week 2 files
+week_2_data_ingestion/airflow/.google/credentials/google_credentials.json
+week_2_data_ingestion/airflow/logs/
