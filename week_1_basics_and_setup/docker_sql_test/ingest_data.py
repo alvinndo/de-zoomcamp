@@ -1,10 +1,13 @@
 import pandas as pd
+
 import argparse
 import os
 import sys
 import csv
+
 from time import time
 from sqlalchemy import create_engine
+import d6tstack.utils
 
 def download_csv(url, output):
     try:
@@ -19,6 +22,8 @@ def download_csv(url, output):
         print("Oops! Something went wrong downloading the file!", sys.exc_info()[0])
 
 def ingest(csvname, user, password, host, port, db, table_name):
+    ig_start = time()
+
     print(f'Grabbing {csvname} to start ingestion\n')
 
     file = open(csvname)
@@ -31,22 +36,25 @@ def ingest(csvname, user, password, host, port, db, table_name):
 
             try:
                 print('Starting engine...')
-                engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{db}")
+                engine = create_engine(f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{db}", use_batch_mode=True)
                 print("Engine connected\n")
             except:
                 print("Something failed with the engine!\n", sys.exc_info()[0])
 
             chunksize = 100000
 
-            df_iter = pd.read_csv(csvname, iterator=True, chunksize=chunksize)
+            df = pd.read_csv(csvname, low_memory=False)
+            df.to_csv(csvname)
+
+            df_iter = pd.read_csv(csvname, iterator=True, chunksize=chunksize, low_memory=False)
 
             df = next(df_iter)
 
             df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
             df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
 
-            df.head(n=0).to_sql(name=table_name, con=engine, if_exists='replace')
-            df.to_sql(name=table_name, con=engine, if_exists='append', method='multi')
+            d6tstack.utils.pd_to_psql(df.head(n=0), f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{db}", table_name, if_exists='replace')
+            d6tstack.utils.pd_to_psql(df, f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{db}", table_name, if_exists='append')
 
             n = chunksize*2
             for chunk in df_iter:
@@ -58,7 +66,7 @@ def ingest(csvname, user, password, host, port, db, table_name):
                 df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
                 df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
 
-                df.to_sql(name=table_name, con=engine, if_exists='append', method='multi')
+                d6tstack.utils.pd_to_psql(df, f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{db}", table_name, if_exists='append')
                 
                 t_end = time()
                 print(f"Imported chunk... -- {t_end - t_start:.3f}s. -- {int( (n/lines)*100 )}% completed.")
@@ -86,7 +94,10 @@ def ingest(csvname, user, password, host, port, db, table_name):
             except:
                 print("Something failed with the engine!\n", sys.exc_info()[0])
         except:
-            print("Oops! Something went wrong with the ingestion!", sys.exc_info()[0])            
+            print("Oops! Something went wrong with the ingestion!", sys.exc_info()[0])
+
+    ig_end = time()
+    print(f"--Ingestion completed in {ig_end - ig_start:.3f}s--")            
 
 def main(params, zones):
     user = params.user
@@ -127,7 +138,6 @@ if __name__=="__main__":
     parser.add_argument('--output_csv', help ='name of the .csv output file')
 
     args = parser.parse_args()
-    hi= print()
 
     zones_input = input("Input taxi_zones data? (y/n): ")
     if zones_input.lower() == 'y':
