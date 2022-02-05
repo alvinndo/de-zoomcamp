@@ -1,4 +1,6 @@
 import pandas as pd
+from sqlalchemy import create_engine
+import d6tstack.utils
 
 import argparse
 import os
@@ -6,8 +8,6 @@ import sys
 import csv
 
 from time import time
-from sqlalchemy import create_engine
-import d6tstack.utils
 
 def download_csv(url, output):
     try:
