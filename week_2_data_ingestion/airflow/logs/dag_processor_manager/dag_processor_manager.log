@@ -27664,3 +27664,49 @@ File Path                                       PID  Runtime      # DAGs    # Er
 [2022-02-06 07:50:49,898] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-06 07:45:49.897333+00:00
 [2022-02-06 07:51:00,077] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
 [2022-02-06 07:51:00,080] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-06 07:46:00.080537+00:00
+[2022-02-06 07:51:10,216] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-06 07:51:10,228] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-06 07:46:10.228110+00:00
+[2022-02-06 07:51:10,304] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/gcp_ingestion_local_dag.py                           1           0  3.04s           2022-02-06T07:50:41
+/opt/airflow/dags/hw2-fhv_dag.py                                       1           0  1.05s           2022-02-06T07:51:08
+/opt/airflow/dags/hw2-yellow_taxi_dag.py                               1           0  1.08s           2022-02-06T07:51:06
+/opt/airflow/dags/hw2-zone_dag.py                                      1           0  1.22s           2022-02-06T07:51:00
+================================================================================
+[2022-02-06 07:51:20,380] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-06 07:51:20,383] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-06 07:46:20.383431+00:00
+[2022-02-06 07:51:30,495] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-06 07:51:30,498] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-06 07:46:30.498524+00:00
+[2022-02-06 07:51:40,561] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-06 07:51:40,565] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-06 07:46:40.564906+00:00
+[2022-02-06 07:51:40,603] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/gcp_ingestion_local_dag.py                           1           0  2.92s           2022-02-06T07:51:15
+/opt/airflow/dags/hw2-fhv_dag.py                                       1           0  1.18s           2022-02-06T07:51:39
+/opt/airflow/dags/hw2-yellow_taxi_dag.py                               1           0  1.14s           2022-02-06T07:51:37
+/opt/airflow/dags/hw2-zone_dag.py                                      1           0  1.10s           2022-02-06T07:51:31
+================================================================================
+[2022-02-06 07:51:42,617] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:42,691] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:43,626] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:43,702] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:44,635] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:44,708] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:45,660] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:45,724] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:46,697] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:46,750] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:47,731] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:47,770] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:48,753] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:48,790] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:49,763] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
+[2022-02-06 07:51:49,796] {manager.py:991} WARNING - Skipping processing of missing file: /opt/airflow/dags/gcp_ingestion_local_dag.py
