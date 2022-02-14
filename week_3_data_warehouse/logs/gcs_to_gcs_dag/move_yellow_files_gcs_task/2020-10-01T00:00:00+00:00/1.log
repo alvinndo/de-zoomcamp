@@ -1,0 +1,26 @@
+[2022-02-14 04:23:13,838] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_gcs_dag.move_yellow_files_gcs_task scheduled__2020-10-01T00:00:00+00:00 [queued]>
+[2022-02-14 04:23:13,924] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_gcs_dag.move_yellow_files_gcs_task scheduled__2020-10-01T00:00:00+00:00 [queued]>
+[2022-02-14 04:23:13,927] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-14 04:23:13,930] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2022-02-14 04:23:13,932] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-14 04:23:14,035] {taskinstance.py:1259} INFO - Executing <Task(GCSToGCSOperator): move_yellow_files_gcs_task> on 2020-10-01 00:00:00+00:00
+[2022-02-14 04:23:14,045] {standard_task_runner.py:52} INFO - Started process 4595 to run task
+[2022-02-14 04:23:14,061] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_gcs_dag', 'move_yellow_files_gcs_task', 'scheduled__2020-10-01T00:00:00+00:00', '--job-id', '34', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_gcs_dag.py', '--cfg-path', '/tmp/tmpppvab76l', '--error-file', '/tmp/tmpwposke4z']
+[2022-02-14 04:23:14,066] {standard_task_runner.py:77} INFO - Job 34: Subtask move_yellow_files_gcs_task
+[2022-02-14 04:23:14,546] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_to_gcs_dag.move_yellow_files_gcs_task scheduled__2020-10-01T00:00:00+00:00 [running]> on host a1acede301ac
+[2022-02-14 04:23:14,812] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-02-14 04:23:15,035] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_to_gcs_dag
+AIRFLOW_CTX_TASK_ID=move_yellow_files_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2020-10-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-10-01T00:00:00+00:00
+[2022-02-14 04:23:15,041] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-02-14 04:23:15,586] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-10.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2020/yellow_taxi_2020-10.parquet
+[2022-02-14 04:23:15,719] {gcs.py:251} INFO - Total Bytes: 31572830 | Bytes Written: 31572830
+[2022-02-14 04:23:15,720] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-10.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2020/yellow_taxi_2020-10.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:23:15,829] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=gcs_to_gcs_dag, task_id=move_yellow_files_gcs_task, execution_date=20201001T000000, start_date=20220214T042313, end_date=20220214T042315
+[2022-02-14 04:23:15,925] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-14 04:23:16,163] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,191 @@
+[2022-02-14 03:25:11,009] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_gcs_dag.move_yellow_files_gcs_task scheduled__2019-01-01T00:00:00+00:00 [queued]>
+[2022-02-14 03:25:11,052] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_gcs_dag.move_yellow_files_gcs_task scheduled__2019-01-01T00:00:00+00:00 [queued]>
+[2022-02-14 03:25:11,054] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-14 03:25:11,055] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2022-02-14 03:25:11,057] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-14 03:25:11,107] {taskinstance.py:1259} INFO - Executing <Task(GCSToGCSOperator): move_yellow_files_gcs_task> on 2019-01-01 00:00:00+00:00
+[2022-02-14 03:25:11,113] {standard_task_runner.py:52} INFO - Started process 611 to run task
+[2022-02-14 03:25:11,127] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_gcs_dag', 'move_yellow_files_gcs_task', 'scheduled__2019-01-01T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_gcs_dag.py', '--cfg-path', '/tmp/tmpv4vt0eiu', '--error-file', '/tmp/tmpq67dun73']
+[2022-02-14 03:25:11,130] {standard_task_runner.py:77} INFO - Job 2: Subtask move_yellow_files_gcs_task
+[2022-02-14 03:25:11,472] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_to_gcs_dag.move_yellow_files_gcs_task scheduled__2019-01-01T00:00:00+00:00 [running]> on host a1acede301ac
+[2022-02-14 03:25:11,860] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_to_gcs_dag
+AIRFLOW_CTX_TASK_ID=move_yellow_files_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2019-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-01-01T00:00:00+00:00
+[2022-02-14 03:25:11,868] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-02-14 03:25:11,870] {gcs_to_gcs.py:346} INFO - Delimiter ignored because wildcard is in prefix
+[2022-02-14 03:25:12,576] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-01.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2019-01.parquet
+[2022-02-14 03:25:12,736] {gcs.py:251} INFO - Total Bytes: 137625296 | Bytes Written: 137625296
+[2022-02-14 03:25:12,738] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-01.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2019-01.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:12,739] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-02.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2019-02.parquet
+[2022-02-14 03:25:12,939] {gcs.py:251} INFO - Total Bytes: 128380769 | Bytes Written: 128380769
+[2022-02-14 03:25:12,940] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-02.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2019-02.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:12,942] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-03.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2019-03.parquet
+[2022-02-14 03:25:13,082] {gcs.py:251} INFO - Total Bytes: 144113501 | Bytes Written: 144113501
+[2022-02-14 03:25:13,085] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-03.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2019-03.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:13,087] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-04.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2019-04.parquet
+[2022-02-14 03:25:13,242] {gcs.py:251} INFO - Total Bytes: 136706305 | Bytes Written: 136706305
+[2022-02-14 03:25:13,243] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-04.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2019-04.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:13,245] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-05.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2019-05.parquet
+[2022-02-14 03:25:13,387] {gcs.py:251} INFO - Total Bytes: 137418656 | Bytes Written: 137418656
+[2022-02-14 03:25:13,388] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-05.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2019-05.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:13,390] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-06.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2019-06.parquet
+[2022-02-14 03:25:13,530] {gcs.py:251} INFO - Total Bytes: 126726779 | Bytes Written: 126726779
+[2022-02-14 03:25:13,531] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-06.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2019-06.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:13,533] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-07.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2019-07.parquet
+[2022-02-14 03:25:13,675] {gcs.py:251} INFO - Total Bytes: 115534598 | Bytes Written: 115534598
+[2022-02-14 03:25:13,677] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-07.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2019-07.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:13,678] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-08.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2019-08.parquet
+[2022-02-14 03:25:13,807] {gcs.py:251} INFO - Total Bytes: 111332831 | Bytes Written: 111332831
+[2022-02-14 03:25:13,809] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-08.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2019-08.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:13,810] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-09.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2019-09.parquet
+[2022-02-14 03:25:13,943] {gcs.py:251} INFO - Total Bytes: 120286338 | Bytes Written: 120286338
+[2022-02-14 03:25:13,945] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-09.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2019-09.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:13,946] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-10.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2019-10.parquet
+[2022-02-14 03:25:14,085] {gcs.py:251} INFO - Total Bytes: 130950231 | Bytes Written: 130950231
+[2022-02-14 03:25:14,087] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-10.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2019-10.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:14,089] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-11.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2019-11.parquet
+[2022-02-14 03:25:14,274] {gcs.py:251} INFO - Total Bytes: 124810768 | Bytes Written: 124810768
+[2022-02-14 03:25:14,277] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-11.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2019-11.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:14,279] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-12.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2019-12.parquet
+[2022-02-14 03:25:14,420] {gcs.py:251} INFO - Total Bytes: 125360614 | Bytes Written: 125360614
+[2022-02-14 03:25:14,421] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-12.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2019-12.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:14,422] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-01.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2020-01.parquet
+[2022-02-14 03:25:14,596] {gcs.py:251} INFO - Total Bytes: 116228546 | Bytes Written: 116228546
+[2022-02-14 03:25:14,598] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-01.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2020-01.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:14,599] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-02.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2020-02.parquet
+[2022-02-14 03:25:14,734] {gcs.py:251} INFO - Total Bytes: 113958025 | Bytes Written: 113958025
+[2022-02-14 03:25:14,735] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-02.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2020-02.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:14,737] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-03.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2020-03.parquet
+[2022-02-14 03:25:14,928] {gcs.py:251} INFO - Total Bytes: 54378226 | Bytes Written: 54378226
+[2022-02-14 03:25:14,929] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-03.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2020-03.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:14,930] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-04.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2020-04.parquet
+[2022-02-14 03:25:15,058] {gcs.py:251} INFO - Total Bytes: 5285861 | Bytes Written: 5285861
+[2022-02-14 03:25:15,060] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-04.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2020-04.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:15,061] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-05.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2020-05.parquet
+[2022-02-14 03:25:15,201] {gcs.py:251} INFO - Total Bytes: 7436367 | Bytes Written: 7436367
+[2022-02-14 03:25:15,203] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-05.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2020-05.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:15,204] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-06.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2020-06.parquet
+[2022-02-14 03:25:15,320] {gcs.py:251} INFO - Total Bytes: 11323874 | Bytes Written: 11323874
+[2022-02-14 03:25:15,322] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-06.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2020-06.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:15,323] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-07.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2020-07.parquet
+[2022-02-14 03:25:15,461] {gcs.py:251} INFO - Total Bytes: 15762125 | Bytes Written: 15762125
+[2022-02-14 03:25:15,463] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-07.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2020-07.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:15,464] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-08.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2020-08.parquet
+[2022-02-14 03:25:15,594] {gcs.py:251} INFO - Total Bytes: 19636193 | Bytes Written: 19636193
+[2022-02-14 03:25:15,596] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-08.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2020-08.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:15,597] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-09.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2020-09.parquet
+[2022-02-14 03:25:15,736] {gcs.py:251} INFO - Total Bytes: 25539450 | Bytes Written: 25539450
+[2022-02-14 03:25:15,737] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-09.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2020-09.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:15,738] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-10.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2020-10.parquet
+[2022-02-14 03:25:15,870] {gcs.py:251} INFO - Total Bytes: 31572830 | Bytes Written: 31572830
+[2022-02-14 03:25:15,872] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-10.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2020-10.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:15,874] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-11.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2020-11.parquet
+[2022-02-14 03:25:16,024] {gcs.py:251} INFO - Total Bytes: 28375709 | Bytes Written: 28375709
+[2022-02-14 03:25:16,027] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-11.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2020-11.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:16,030] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-12.parquet to gs://dtc_data_lake_sage-now-339201/yellow/{ execution_date.strftime('%Y') }/_taxi_2020-12.parquet
+[2022-02-14 03:25:16,182] {gcs.py:251} INFO - Total Bytes: 27480890 | Bytes Written: 27480890
+[2022-02-14 03:25:16,184] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-12.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/{ execution_date.strftime('%Y') }/_taxi_2020-12.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 03:25:16,290] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=gcs_to_gcs_dag, task_id=move_yellow_files_gcs_task, execution_date=20190101T000000, start_date=20220214T032511, end_date=20220214T032516
+[2022-02-14 03:25:16,444] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-14 03:25:16,663] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-02-14 04:03:47,331] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_gcs_dag.move_yellow_files_gcs_task scheduled__2019-01-01T00:00:00+00:00 [queued]>
+[2022-02-14 04:03:47,378] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_gcs_dag.move_yellow_files_gcs_task scheduled__2019-01-01T00:00:00+00:00 [queued]>
+[2022-02-14 04:03:47,379] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-14 04:03:47,380] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2022-02-14 04:03:47,381] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-14 04:03:47,423] {taskinstance.py:1259} INFO - Executing <Task(GCSToGCSOperator): move_yellow_files_gcs_task> on 2019-01-01 00:00:00+00:00
+[2022-02-14 04:03:47,428] {standard_task_runner.py:52} INFO - Started process 3198 to run task
+[2022-02-14 04:03:47,435] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_gcs_dag', 'move_yellow_files_gcs_task', 'scheduled__2019-01-01T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_gcs_dag.py', '--cfg-path', '/tmp/tmpoifwabhl', '--error-file', '/tmp/tmp6vnniroc']
+[2022-02-14 04:03:47,437] {standard_task_runner.py:77} INFO - Job 11: Subtask move_yellow_files_gcs_task
+[2022-02-14 04:03:47,757] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_to_gcs_dag.move_yellow_files_gcs_task scheduled__2019-01-01T00:00:00+00:00 [running]> on host a1acede301ac
+[2022-02-14 04:03:48,011] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-02-14 04:03:48,233] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_to_gcs_dag
+AIRFLOW_CTX_TASK_ID=move_yellow_files_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2019-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-01-01T00:00:00+00:00
+[2022-02-14 04:03:48,240] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-02-14 04:03:48,243] {gcs_to_gcs.py:346} INFO - Delimiter ignored because wildcard is in prefix
+[2022-02-14 04:03:48,760] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-08.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2019-08.parquet
+[2022-02-14 04:03:49,074] {gcs.py:251} INFO - Total Bytes: 111332831 | Bytes Written: 111332831
+[2022-02-14 04:03:49,077] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-08.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2019-08.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:49,079] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-12.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2019-12.parquet
+[2022-02-14 04:03:49,228] {gcs.py:251} INFO - Total Bytes: 125360614 | Bytes Written: 125360614
+[2022-02-14 04:03:49,231] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-12.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2019-12.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:49,233] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-03.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2019-03.parquet
+[2022-02-14 04:03:49,401] {gcs.py:251} INFO - Total Bytes: 144113501 | Bytes Written: 144113501
+[2022-02-14 04:03:49,403] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-03.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2019-03.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:49,404] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-07.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2019-07.parquet
+[2022-02-14 04:03:49,519] {gcs.py:251} INFO - Total Bytes: 115534598 | Bytes Written: 115534598
+[2022-02-14 04:03:49,520] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-07.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2019-07.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:49,522] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-12.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2020-12.parquet
+[2022-02-14 04:03:49,665] {gcs.py:251} INFO - Total Bytes: 27480890 | Bytes Written: 27480890
+[2022-02-14 04:03:49,667] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-12.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2020-12.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:49,668] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-05.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2019-05.parquet
+[2022-02-14 04:03:49,800] {gcs.py:251} INFO - Total Bytes: 137418656 | Bytes Written: 137418656
+[2022-02-14 04:03:49,803] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-05.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2019-05.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:49,804] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-01.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2019-01.parquet
+[2022-02-14 04:03:49,953] {gcs.py:251} INFO - Total Bytes: 137625296 | Bytes Written: 137625296
+[2022-02-14 04:03:49,955] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-01.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2019-01.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:49,957] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-01.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2020-01.parquet
+[2022-02-14 04:03:50,112] {gcs.py:251} INFO - Total Bytes: 116228546 | Bytes Written: 116228546
+[2022-02-14 04:03:50,114] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-01.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2020-01.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:50,116] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-08.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2020-08.parquet
+[2022-02-14 04:03:50,260] {gcs.py:251} INFO - Total Bytes: 19636193 | Bytes Written: 19636193
+[2022-02-14 04:03:50,261] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-08.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2020-08.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:50,263] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-04.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2019-04.parquet
+[2022-02-14 04:03:50,408] {gcs.py:251} INFO - Total Bytes: 136706305 | Bytes Written: 136706305
+[2022-02-14 04:03:50,409] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-04.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2019-04.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:50,410] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-06.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2020-06.parquet
+[2022-02-14 04:03:50,522] {gcs.py:251} INFO - Total Bytes: 11323874 | Bytes Written: 11323874
+[2022-02-14 04:03:50,524] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-06.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2020-06.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:50,527] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-02.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2020-02.parquet
+[2022-02-14 04:03:50,664] {gcs.py:251} INFO - Total Bytes: 113958025 | Bytes Written: 113958025
+[2022-02-14 04:03:50,666] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-02.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2020-02.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:50,669] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-02.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2019-02.parquet
+[2022-02-14 04:03:50,802] {gcs.py:251} INFO - Total Bytes: 128380769 | Bytes Written: 128380769
+[2022-02-14 04:03:50,804] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-02.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2019-02.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:50,807] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-09.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2019-09.parquet
+[2022-02-14 04:03:50,951] {gcs.py:251} INFO - Total Bytes: 120286338 | Bytes Written: 120286338
+[2022-02-14 04:03:50,953] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-09.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2019-09.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:50,954] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-10.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2020-10.parquet
+[2022-02-14 04:03:51,078] {gcs.py:251} INFO - Total Bytes: 31572830 | Bytes Written: 31572830
+[2022-02-14 04:03:51,079] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-10.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2020-10.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:51,080] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-03.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2020-03.parquet
+[2022-02-14 04:03:51,220] {gcs.py:251} INFO - Total Bytes: 54378226 | Bytes Written: 54378226
+[2022-02-14 04:03:51,222] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-03.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2020-03.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:51,223] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-10.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2019-10.parquet
+[2022-02-14 04:03:51,346] {gcs.py:251} INFO - Total Bytes: 130950231 | Bytes Written: 130950231
+[2022-02-14 04:03:51,348] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-10.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2019-10.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:51,349] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-09.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2020-09.parquet
+[2022-02-14 04:03:51,486] {gcs.py:251} INFO - Total Bytes: 25539450 | Bytes Written: 25539450
+[2022-02-14 04:03:51,489] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-09.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2020-09.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:51,491] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-07.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2020-07.parquet
+[2022-02-14 04:03:51,639] {gcs.py:251} INFO - Total Bytes: 15762125 | Bytes Written: 15762125
+[2022-02-14 04:03:51,642] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-07.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2020-07.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:51,644] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-11.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2020-11.parquet
+[2022-02-14 04:03:51,777] {gcs.py:251} INFO - Total Bytes: 28375709 | Bytes Written: 28375709
+[2022-02-14 04:03:51,779] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-11.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2020-11.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:51,781] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-05.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2020-05.parquet
+[2022-02-14 04:03:51,912] {gcs.py:251} INFO - Total Bytes: 7436367 | Bytes Written: 7436367
+[2022-02-14 04:03:51,914] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-05.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2020-05.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:51,916] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2020-04.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2020-04.parquet
+[2022-02-14 04:03:52,051] {gcs.py:251} INFO - Total Bytes: 5285861 | Bytes Written: 5285861
+[2022-02-14 04:03:52,052] {gcs.py:264} INFO - Object raw/yellow_taxi_2020-04.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2020-04.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:52,053] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-06.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2019-06.parquet
+[2022-02-14 04:03:52,170] {gcs.py:251} INFO - Total Bytes: 126726779 | Bytes Written: 126726779
+[2022-02-14 04:03:52,172] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-06.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2019-06.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:52,174] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_sage-now-339201/raw/yellow_taxi_2019-11.parquet to gs://dtc_data_lake_sage-now-339201/yellow/2019/_taxi_2019-11.parquet
+[2022-02-14 04:03:52,303] {gcs.py:251} INFO - Total Bytes: 124810768 | Bytes Written: 124810768
+[2022-02-14 04:03:52,304] {gcs.py:264} INFO - Object raw/yellow_taxi_2019-11.parquet in bucket dtc_data_lake_sage-now-339201 rewritten to object yellow/2019/_taxi_2019-11.parquet in bucket dtc_data_lake_sage-now-339201
+[2022-02-14 04:03:52,407] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=gcs_to_gcs_dag, task_id=move_yellow_files_gcs_task, execution_date=20190101T000000, start_date=20220214T040347, end_date=20220214T040352
+[2022-02-14 04:03:52,719] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-14 04:03:52,928] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
