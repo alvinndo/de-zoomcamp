@@ -13,3 +13,6 @@ week_1_basics_and_setup/docker_sql_test/.ipynb_checkpoints/
 # Week 2 files
 week_2_data_ingestion/airflow/.google/credentials/google_credentials.json
 week_2_data_ingestion/airflow/logs/
+
+# Week 3 files
+week_3_data_warehouse/logs/
