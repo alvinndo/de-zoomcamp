@@ -16,3 +16,6 @@ week_2_data_ingestion/airflow/logs/
 
 # Week 3 files
 week_3_data_warehouse/logs/
+
+# Week 4 files
+week_4_analytics_engineering/logs

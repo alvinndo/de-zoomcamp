@@ -5563,3 +5563,23 @@ File Path                            PID    Runtime      # DAGs    # Errors  Las
 ================================================================================
 [2022-02-16 05:05:53,117] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
 [2022-02-16 05:05:53,120] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-16 05:00:53.120685+00:00
+[2022-02-16 05:06:03,240] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-16 05:06:03,242] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-16 05:01:03.242410+00:00
+[2022-02-16 05:06:13,565] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-16 05:06:13,578] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-16 05:01:13.577650+00:00
+[2022-02-16 05:06:17,207] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/gcs_to_gcs_dag.py                           1           0  0.81s           2022-02-16T05:06:08
+/opt/airflow/dags/green_taxi_dag.py                           1           0  1.40s           2022-02-16T05:05:54
+================================================================================
+[2022-02-16 05:06:23,704] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-16 05:06:23,707] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-16 05:01:23.707515+00:00
+[2022-02-16 05:06:34,332] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-16 05:06:34,341] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-16 05:01:34.341099+00:00
+[2022-02-16 05:06:44,481] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-02-16 05:06:44,485] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-02-16 05:01:44.485111+00:00
+[2022-02-16 05:06:45,090] {manager.py:495} INFO - Exiting gracefully upon receiving signal 15
