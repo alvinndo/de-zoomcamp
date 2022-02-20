@@ -24,3 +24,12 @@ Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
 Happy modeling!
 
 03:21:15.964305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f0f340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f0f730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0fdc10>]}
+
+
+============================== 2022-02-20 19:47:31.809868 | a10f12b7-7a43-43d5-9bfc-c871966c7098 ==============================
+19:47:31.809868 [info ] [MainThread]: Running with dbt=1.0.1
+19:47:31.810196 [debug] [MainThread]: running dbt with arguments Namespace(record_timing_info=None, debug=None, log_format=None, write_json=None, use_colors=None, printer_width=None, warn_error=None, version_check=None, partial_parse=None, single_threaded=False, use_experimental_parser=None, static_parser=None, profiles_dir='/Users/alvin/.dbt', send_anonymous_usage_stats=None, fail_fast=None, event_buffer_size=None, project_dir=None, profile=None, target=None, vars='{}', log_cache_events=False, project_name=None, skip_profile_setup=False, defer=None, state=None, cls=<class 'dbt.task.init.InitTask'>, which='init', rpc_method=None)
+19:47:31.810278 [debug] [MainThread]: Tracking: tracking
+19:47:31.818255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106708d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106708fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106708c70>]}
+19:52:29.484523 [info ] [MainThread]: A project called taxi_rides_ny already exists here.
+19:52:29.487529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106708e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066baa00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066baa90>]}
