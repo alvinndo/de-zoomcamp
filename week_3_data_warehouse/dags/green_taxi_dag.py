@@ -4,6 +4,7 @@ import logging
 
 from datetime import datetime
 
+# import pyarrow as pa
 import pyarrow.csv as pcsv
 import pyarrow.parquet as ppq
 
@@ -25,11 +26,37 @@ OUTPUT_PQ_FILE = AIRFLOW_HOME + '/output_{{ execution_date.strftime("%Y-%m") }}.
 EXEC_YEAR = '{{ execution_date.strftime("%Y") }}'
 EXEC_DATE = '{{ execution_date.strftime("%Y-%m") }}'
 
+# table_schema = pa.schema(
+#     [
+#         ('VendorID',pa.int64()),
+#         ('lpep_pickup_datetime',pa.timestamp('s')),
+#         ('lpep_dropoff_datetime',pa.timestamp('s')),
+#         ('store_and_fwd_flag',pa.string()),
+#         ('RatecodeID',pa.int64()),
+#         ('PULocationID',pa.int64()),
+#         ('DOLocationID',pa.int64()),
+#         ('passenger_count',pa.int64()),
+#         ('trip_distance',pa.float64()),
+#         ('fare_amount',pa.float64()),
+#         ('extra',pa.float64()),
+#         ('mta_tax',pa.float64()),
+#         ('tip_amount',pa.float64()),
+#         ('tolls_amount',pa.float64()),
+#         ('ehail_fee',pa.float64()),
+#         ('improvement_surcharge',pa.float64()),
+#         ('total_amount',pa.float64()),
+#         ('payment_type',pa.int64()),
+#         ('trip_type',pa.int64()),
+#         ('congestion_surcharge',pa.float64()),
+#     ]
+# )
+
 def format_to_parquet(src_file):
     if not src_file.endswith('.csv'):
         logging.error("Can only accept CSV files")
         return
-    dataset = pcsv.read_csv(src_file)
+    dataset = pcsv.read_csv(src_file, convert_options=pcsv.ConvertOptions(column_types={'ehail_fee': 'float64'}))
+    # dataset = dataset.cast(table_schema)
     ppq.write_table(dataset, src_file.replace('.csv', '.parquet'))
 
 
